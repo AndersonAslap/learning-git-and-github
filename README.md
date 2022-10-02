@@ -114,3 +114,9 @@ git config --global commit.gpgsign true
 ```bash
 git config --global tag.gpgSign true
 ```
+
+- Após realizar algum commit o comando abaixo mostrará se seu commit foi assinado 
+
+```bash
+git log --show-signature -1
+```
