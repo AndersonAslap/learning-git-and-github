@@ -120,3 +120,76 @@ git config --global tag.gpgSign true
 ```bash
 git log --show-signature -1
 ```
+
+> Adicionando mais emails na chave 
+
+```bash
+gpg --edit-key $ID_CHAVE
+```
+
+```bash
+gpg (GnuPG) 2.2.4; Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Chave secreta disponível.
+
+sec  rsa4096/F9C2A3C5078474CF
+     criado: 2022-10-02  expira: 2023-10-02  uso: SC  
+     confiança: final         validade: final
+ssb  rsa4096/25E27F9C873712CA
+     criado: 2022-10-02  expira: 2023-10-02  uso: E   
+[final] (1). Anderson Adolfo <anderson.adolfo1998@gmail.com>
+
+gpg> adduid
+Nome completo: Anderson Aslap
+Endereço de correio eletrônico: $EMAIL
+Comentário:
+Você selecionou este identificador de usuário:
+    "Anderson Aslap <anderson.works1998@gmail.com>"
+
+Muda (N)ome, (C)omentário, (E)ndereço ou (O)k/(S)air? o
+
+sec  rsa4096/F9C2A3C5078474CF
+     criado: 2022-10-02  expira: 2023-10-02  uso: SC  
+     confiança: final         validade: final
+ssb  rsa4096/25E27F9C873712CA
+     criado: 2022-10-02  expira: 2023-10-02  uso: E   
+[final] (1)  Anderson Adolfo <anderson.adolfo1998@gmail.com>
+[ desconhecida] (2). Anderson Aslap <anderson.works1998@gmail.com>
+
+gpg> uid 2
+
+sec  rsa4096/F9C2A3C5078474CF
+     criado: 2022-10-02  expira: 2023-10-02  uso: SC  
+     confiança: final         validade: final
+ssb  rsa4096/25E27F9C873712CA
+     criado: 2022-10-02  expira: 2023-10-02  uso: E   
+[final] (1)  Anderson Adolfo <anderson.adolfo1998@gmail.com>
+[ desconhecida] (2)* Anderson Aslap <anderson.works1998@gmail.com>
+gpg> trust
+sec  rsa4096/F9C2A3C5078474CF
+     criado: 2022-10-02  expira: 2023-10-02  uso: SC  
+     confiança: final         validade: final
+ssb  rsa4096/25E27F9C873712CA
+     criado: 2022-10-02  expira: 2023-10-02  uso: E   
+[final] (1)  Anderson Adolfo <anderson.adolfo1998@gmail.com>
+[ desconhecida] (2)* Anderson Aslap <anderson.works1998@gmail.com>
+
+Por favor decida quanto você confia neste usuário para
+verificar corretamente as chaves de outros usuários
+(olhando em passaportes, checando impressões digitais
+de outras fontes...)
+
+  1 = Eu não sei ou nem direi
+  2 = Eu NÃO confio
+  3 = Eu tenho pouca confiança
+  4 = Eu confio totalmente
+  5 = Eu confio ao extremo
+  m = voltar ao menu principal
+
+Sua decisão? 5
+Você quer realmente definir esta chave à confiança final? y
+
+gpg> save
+```
