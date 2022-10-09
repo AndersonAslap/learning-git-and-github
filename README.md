@@ -246,3 +246,7 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 ```
 
 https://commitlint.js.org/#/guides-local-setup
+
+https://commitsar.aevea.ee/usage/docker/
+
+https://www.npmjs.com/package/commitizen
