@@ -1,0 +1,7 @@
+.github/ @AndersonAslap
+*.jsx @AndersonAslap
+*.tsx @AndersonAslap
+*.ts @IvanFigueiredo
+*.spec @IvanFigueiredo
+*.js @codigos-MP
+*.html @codigos-MP
